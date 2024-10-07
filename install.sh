@@ -14,8 +14,10 @@ cd ~/ccminer
 
 wget https://raw.githubusercontent.com/jashanpreet-singh-99/Android-Mining/main/config.json -P ~/ccminer
 wget https://raw.githubusercontent.com/jashanpreet-singh-99/Android-Mining/main/ccminer -P ~/ccminer
+wget https://raw.githubusercontent.com/jashanpreet-singh-99/Android-Mining/main/run.sh -P ~/ccminer
 # https://raw.githubusercontent.com/jashanpreet-singh-99/Android-Mining/refs/heads/main/config.json
 
+chmod +x ~/ccminer/run.sh
 chmod +x ~/ccminer/ccminer
 
 cat << EOF > ~/ccminer/start.sh
@@ -39,8 +41,8 @@ printf 'stop: screen -X -S CCminer quit\n'
 printf '\nmonitor mining: screen -x CCminer\n'
 printf "exit monitor: 'CTRL-a' followed by 'd'\n\n"
 printf "===============\n"
-ptintf "stop_m : stop miner\n"
-ptintf "check_m : monitor miner\n"
+printf "stop_m : stop miner\n"
+printf "check_m : monitor miner\n"
 EOF
 chmod +x start.sh
 
