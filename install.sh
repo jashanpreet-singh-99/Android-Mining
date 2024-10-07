@@ -20,6 +20,9 @@ chmod +x ~/ccminer/ccminer
 
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
+# shortcuts
+alias check_m="screen -x CCminer"
+alias stop_m="screen -X -S CCminer quit"
 #exit existing screens with the name CCminer
 screen -S CCminer -X quit 1>/dev/null 2>&1
 #wipe any existing (dead) screens)
@@ -35,9 +38,9 @@ printf 'start: ~/.ccminer/start.sh\n'
 printf 'stop: screen -X -S CCminer quit\n'
 printf '\nmonitor mining: screen -x CCminer\n'
 printf "exit monitor: 'CTRL-a' followed by 'd'\n\n"
-
-alias check_m='screen -x CCminer'
-alias stop_m='screen -X -S CCminer quit'
+printf "===============\n"
+ptintf "stop_m : stop miner\n"
+ptintf "check_m : monitor miner\n"
 EOF
 chmod +x start.sh
 
