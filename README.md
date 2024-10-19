@@ -1,7 +1,9 @@
 ## VNC setup
 
 `sudo apt-get install x11vnc`
+
 `x11vnc -storepasswd`
+
 `x11vnc -display :0 -usepw -forever -loop -noxdamage`
 
 ### In I3 setup  add
